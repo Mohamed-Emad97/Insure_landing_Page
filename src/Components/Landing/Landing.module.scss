@@ -1,0 +1,75 @@
+//Import File
+
+@use "../../sass/Mixin.scss" as *;
+
+@use "../../sass/Variblies.scss" as *;
+
+#landing{
+    background-color: $Dark-Violet;
+    height: 100vh;
+    .text, .img{
+        flex-basis: 45%;
+    }
+    .text{
+        color: $Very-Light-Gray;
+        h1{
+            font-size: 4.5rem;
+            letter-spacing: 3px;
+            font-family: 'DM Serif Display', serif;
+            font-weight: 700;
+        }
+        p{
+            font-size: $Font-size;
+            white-space: pre-line;
+        }
+    }
+    .img{
+        position: relative;
+        top: 15%;
+    }
+    .leftPattern{
+        bottom: -20%;
+        left: 0;
+    }
+    .rightPattern{
+        top: 0;
+        right: 0;
+    }
+    .Btn{
+        .btnMain{
+            @include btnMain($Very-Light-Gray, $Font-size, transparent, $Very-Dark-Violet, $Very-Light-Gray);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #landing{
+        overflow: hidden;
+        height: auto;
+        .text{
+            padding: 20px 0;
+            text-align: center;
+            z-index: 2;
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+        .img{
+            position: relative;
+            top: auto;
+            z-index: 2;
+            img{
+                width: auto !important;
+            }
+        }
+        .leftPattern{
+            top: 20%;
+            left: 0;
+        }
+        .rightPattern{
+            bottom: -30%;
+            top: auto;
+            right: 0;
+        }
+    }
+}

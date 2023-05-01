@@ -1,0 +1,24 @@
+//Import File
+@use "../../sass/Mixin.scss" as *;
+
+@use "../../sass/Variblies.scss" as *;
+
+//Rules
+header{
+    background-color: $Very-Light-Gray;
+    nav{
+        ul{
+            li{
+                a{
+                    font-weight: 700 !important;
+                    font-family: 'Karla', sans-serif !important;
+                }
+            }
+            .Btn{
+                .btnMain{
+                    @include btnMain($Very-Dark-Violet, $Font-size, transparent, $Very-Light-Gray, $Very-Dark-Violet);
+                }
+            }
+        }
+    }
+}

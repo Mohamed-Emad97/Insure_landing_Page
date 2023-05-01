@@ -1,0 +1,12 @@
+@mixin btnMain ($mainColor, $fontSize, $bgColor, $hoverColor, $bgHoverColor) {
+    color: $mainColor;
+    font-size: $fontSize;
+    font-weight: 700;
+    border: 1px solid $mainColor;
+    background-color: $bgColor;
+    transition: all ease 1s;
+    &:hover{
+        background-color: $bgHoverColor;
+        color: $hoverColor;
+    }
+}
